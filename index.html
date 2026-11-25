@@ -17,7 +17,7 @@
 .ad-filters button[aria-pressed=true]{color:#fff;background:var(--navy);border-color:var(--navy)}
 .ad-detail [hidden]{display:none!important}
 .ad-detail table{border-collapse:collapse;width:100%;font-size:14px}
-.ad-detail #campaign-table,.ad-detail #avito-listings table{min-width:680px}
+.ad-detail #campaign-table,.ad-detail #avito-listings table,.ad-detail .campaign-ad-table{min-width:680px}
 .ad-detail caption{text-align:left;color:var(--muted);padding:10px 14px}
 .ad-detail th,.ad-detail td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .ad-detail th{background:#f7f9fb;color:#526477}
@@ -84,28 +84,11 @@
     </table></div>
     <p class="note" data-platform="direct">У кампании «Семейные аттракционы» CTR ниже, чем у остальных кампаний Яндекс Директа в сводке (3,24%). При этом она принесла <strong>4 конверсии</strong> по цели «Страница спасибо» по данным Директа.</p>
   </section>
-  <section aria-labelledby="formats" data-platform="direct google">
-    <h3 id="formats">Как выглядят объявления в выдаче</h3>
-    <div class="grid ad-grid">
-      <article class="card" data-platform="direct">
-        <h4>Яндекс Директ · единая перфоманс-кампания (ЕПК)</h4>
-        <p>Одна кампания может объединять несколько форматов и мест показа. В поиске объявление выглядит как рекламный результат с заголовком, описанием и ссылкой. В товарной галерее — как карточка товара с фото и ссылкой. В Рекламной сети Яндекса (РСЯ) возможны баннеры с изображением или видео на сайтах и в приложениях.</p>
-      </article>
-      <article class="card" data-platform="google">
-        <h4>Google Ads · поисковая сеть</h4>
-        <p>В результатах поиска пользователь видит рекламный блок с заголовком, описанием и ссылкой. В адаптивном объявлении Google сочетает подготовленные заголовки и описания. В динамическом объявлении заголовок и ссылку система подбирает по запросу и содержанию сайта.</p>
-      </article>
-      <article class="card" data-platform="google">
-        <h4>Google Ads · максимальная эффективность (Performance Max)</h4>
-        <p>Google подбирает площадку и собирает объявление из текстов, изображений и видео. В зависимости от места показа пользователь может увидеть текстовое объявление в поиске, баннер на сайте или ролик на YouTube.</p>
-      </article>
-    </div>
-  </section>
   <section aria-labelledby="leaders" data-platform="direct google">
-    <h3 id="leaders">Объявления с наибольшим числом кликов</h3>
+    <h3 id="leaders">Популярные объявления по кампаниям</h3>
     <div class="grid ad-grid">
       <article class="card" data-platform="direct">
-        <h4>Яндекс Директ · товарная галерея</h4>
+        <h4>Яндекс Директ · «Товарная галерея на поиске»</h4>
         <div class="table-wrap"><table>
           <thead><tr><th scope="col">Объявление</th><th scope="col" class="num">Клики</th><th scope="col" class="num">CTR</th></tr></thead>
           <tbody>
@@ -117,7 +100,7 @@
         <p>Два объявления о цепочных каруселях собрали <strong>3 628 кликов</strong> — около 45% кликов Директа.</p>
       </article>
       <article class="card" data-platform="google">
-        <h4>Google Ads · поиск по аттракционам</h4>
+        <h4>Google Ads · «Аттракционы_общая_поиск»</h4>
         <div class="table-wrap"><table>
           <thead><tr><th scope="col">Объявление</th><th scope="col" class="num">Клики</th><th scope="col" class="num">CTR</th></tr></thead>
           <tbody>
@@ -128,9 +111,22 @@
         </table></div>
       </article>
     </div>
+    <article class="card" data-platform="direct" style="margin-top:14px">
+      <h4>Яндекс Директ · лидеры остальных кампаний</h4>
+      <div class="table-wrap"><table class="campaign-ad-table">
+        <caption>Показано объявление с наибольшим числом кликов в каждой кампании. В выгрузке указаны номера объявлений.</caption>
+        <thead><tr><th scope="col">Кампания</th><th scope="col">№ объявления</th><th scope="col" class="num">Клики</th><th scope="col" class="num">CTR</th></tr></thead>
+        <tbody>
+          <tr><td>ЕПК № 8 от 22 октября</td><td class="num">1924935454015099949</td><td class="num">942</td><td class="num">5,67%</td></tr>
+          <tr><td>Производство фигур из стеклопластика</td><td class="num">1919110320868811111</td><td class="num">337</td><td class="num">7,32%</td></tr>
+          <tr><td>Экстремальные аттракционы</td><td class="num">17701904289</td><td class="num">197</td><td class="num">3,76%</td></tr>
+          <tr><td>Семейные аттракционы</td><td class="num">17701667594</td><td class="num">112</td><td class="num">3,62%</td></tr>
+        </tbody>
+      </table></div>
+    </article>
   </section>
   <section aria-labelledby="avito-listings" data-platform="avito">
-    <h3 id="avito-listings">Объявления Авито</h3>
+    <h3 id="avito-listings">Популярные объявления Авито</h3>
     <div class="table-wrap"><table>
       <caption>Объявления отсортированы по числу просмотров за октябрь.</caption>
       <thead><tr><th scope="col">Объявление</th><th scope="col" class="num">Показы</th><th scope="col" class="num">Просмотры</th><th scope="col" class="num">Чаты</th><th scope="col" class="num">Просмотры номера</th></tr></thead>
@@ -150,6 +146,23 @@
       </tbody>
     </table></div>
     <p class="note">«Космонавт» лидирует по просмотрам. «Гигантские качели 360» собрали половину чатов.</p>
+  </section>
+  <section aria-labelledby="formats" data-platform="direct google">
+    <h3 id="formats">Как выглядят объявления в выдаче</h3>
+    <div class="grid ad-grid">
+      <article class="card" data-platform="direct">
+        <h4>Яндекс Директ · единая перфоманс-кампания (ЕПК)</h4>
+        <p>Одна кампания может объединять несколько форматов и мест показа. В поиске объявление выглядит как рекламный результат с заголовком, описанием и ссылкой. В товарной галерее — как карточка товара с фото и ссылкой. В Рекламной сети Яндекса (РСЯ) возможны баннеры с изображением или видео на сайтах и в приложениях.</p>
+      </article>
+      <article class="card" data-platform="google">
+        <h4>Google Ads · поисковая сеть</h4>
+        <p>В результатах поиска пользователь видит рекламный блок с заголовком, описанием и ссылкой. В адаптивном объявлении Google сочетает подготовленные заголовки и описания. В динамическом объявлении заголовок и ссылку система подбирает по запросу и содержанию сайта.</p>
+      </article>
+      <article class="card" data-platform="google">
+        <h4>Google Ads · максимальная эффективность (Performance Max)</h4>
+        <p>Google подбирает площадку и собирает объявление из текстов, изображений и видео. В зависимости от места показа пользователь может увидеть текстовое объявление в поиске, баннер на сайте или ролик на YouTube.</p>
+      </article>
+    </div>
   </section>
 </section>
 <section class="section" id="leads"><div class="section-head"><div><h2>Обращения по каналам</h2><p>Почтовые запросы сгруппированы по содержанию переписок.</p></div></div><div class="grid lead-cards">
